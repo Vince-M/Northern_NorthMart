@@ -1,0 +1,33 @@
+{
+  "name": "northernnorthart",
+  "version": "1.0.0",
+  "description": "Marketing website for NWC Northern/NorthMart stores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vince-M/Northern_NorthMart.git"
+  },
+  "author": "Vince Mendella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vince-M/Northern_NorthMart/issues"
+  },
+  "homepage": "https://github.com/Vince-M/Northern_NorthMart#readme",
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "cssnano": "^7.0.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.49",
+    "sass": "^1.81.0"
+  }
+}

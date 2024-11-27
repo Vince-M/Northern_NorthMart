@@ -1,0 +1,90 @@
+@use '../util' as u;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-text);
+	background-color: var(--white);
+	color: var(--black);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-size: cover;
+	shape-margin: 0.75rem;
+}
+
+figure {
+	padding: 0;
+}
+
+figure,
+blockquote {
+	margin: 0;
+}
+
+.breadcrumb {
+
+	&__section {
+		margin-bottom: u.rem(80);
+
+		@include u.breakpoint-down(small) {
+			margin-bottom: u.rem(16);
+		}
+	}
+
+	&__active {
+		color: var(--primaryBlue);
+		font-weight: 700;
+		letter-spacing: 1px;
+		}
+
+		a {
+			color: var(--darkBlue);
+			text-decoration: underline;
+
+
+			&:hover {
+				color: var(--primaryOrange);
+			}
+		}
+}
+
+.visually-hidden {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+
+	&:focus {
+		left: 0;
+		width: auto;
+		height: auto;
+		background-color: #fff;
+		padding: 0.5rem;
+		border: 1px solid;
+	}
+}
