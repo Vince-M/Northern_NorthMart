@@ -117,10 +117,11 @@
           </div>
           <div class="footer__info">
             <div class="footer__info--branding">
-              <a href="index.html"><img src="img/footer_branding.svg" alt=""></a>
+              <a href="index.html"><img src="<?php echo get_theme_file_uri(); ?>/img/footer_branding.svg" alt="Northern/NorthMart homepage"></a>
             </div>
             <div class="footer__info--copyright">
-              <p>Copyright @ 2024 The North West Company - Northern NorthMart</p>
+              <p>Copyright &copy; <?php echo date( 'Y' ); ?> The North West Company - Northern NorthMart</p>
+              <!-- <p>Copyright @ 2024 The North West Company - Northern NorthMart</p> -->
             </div>
           </div>
         </section>
