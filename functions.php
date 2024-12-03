@@ -7,6 +7,19 @@ function ncr_files() {
 
 Add_action('wp_enqueue_scripts', 'ncr_files');
 
+function ncr_features() {
+  register_nav_menu('headerMenuLocation', 'Header Menu Location');
+  register_nav_menu('footerAboutLocation', 'Footer About Location');
+  register_nav_menu('footerServicesLocation', 'Footer Services Location');
+  register_nav_menu('footerHealthyHorizonsLocation', 'Footer Healthy Horizons Location');
+  register_nav_menu('footerCommunityLocation', 'Footer Community Location');
+  register_nav_menu('footerSiteNavigation', 'Footer Site Navigation');
+
+  add_theme_support( 'title-tag' );
+}
+
+add_action('after_setup_theme', 'ncr_features');
+
 
 
 // this has to be the last function in the funtions.php file

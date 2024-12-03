@@ -110,35 +110,19 @@
                   <span class="topLinks__lang--active">eng</span>/fre
                 </li>
               </ul>
-              
+
 
               <!-- MAIN TOPNAV STARTS HERE -->
-              <ul class="menu topnav__links">
-                <li class="topnav__link topnav__item nav__item has-sub-menu">
-                  <a tabindex="0">In-Store &#8964;</a>
-                  <!-- <a href="#" class="topnav__link" >In-Store <img class="topnav__caret" src="img/caret.svg" alt="sub-menu" height="12" width="12"></a> -->
-                  <ul class="sub-menu">
-                    <li class="subitem"><a role="menuitem" href="waystosave.html">Ways to Save</a></li>
-                    <li class="subitem"><a role="menuitem" href="#">Food</a></li>
-                    <li class="subitem"><a role="menuitem" href="#">Home & Lifestyle</a></li>
-                  </ul>
-                </li>
-                <li class="topnav__item nav__item">
-                  <a href="community.html" class="topnav__link">Community</a>
-                </li>
-                <li class="topnav__item nav__item">
-                  <a href="#" class="topnav__link" >Our Promise</a>
-                </li>
-                <li class="topnav__item nav__item">
-                  <a href="healthyHorizons.html" class="topnav__link" >Healthy Horizons</a>
-                </li>
-                <li class="topnav__item nav__item">
-                  <a href="#" class="topnav__link" >Services</a>
-                </li>
-                <li class="topnav__item nav__item">
-                  <a href="about.html" class="topnav__link" >About</a>
-                </li>
-              </ul> <!-- topnav__links -->
+               <div class="menu header__menu">
+                <?php
+                    wp_nav_menu(array(
+                      'theme_location'  =>  'headerMenuLocation',
+                      'depth'           =>  3,
+                      'container'       =>  false,
+                      'menu_class'      =>  'menu topnav__links'
+                    ));
+                  ?>
+               </div>
               <!-- MAIN TOPNAV ENDS HERE -->
                 
             </div> <!-- topnav__menu -->
