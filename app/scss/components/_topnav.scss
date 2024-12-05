@@ -422,17 +422,6 @@
   padding: u.rem(8) 0 0 u.rem(8);
 }
 
-// .sub-menu {
-//   align-items: center;
-//   background-color: var(--primaryYellow);
-//   display: none;
-//   justify-content: center;
-//   padding: 0;
-//   position: absolute;
-//   text-align: center;
-//   top: 1.5625em;
-// }
-
 .has-sub-menu {
   display: flex;
   flex-direction: column;
@@ -484,3 +473,7 @@
 .nav__item.has-sub-menu.sub-menu-active {
   background-color: transparent;
 }
+
+// .customize-support .masthead {
+//   margin-top: u.rem(30);
+// }

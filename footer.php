@@ -5,7 +5,8 @@
     =================================================== -->
     <article>
       <div class="wrapper footer__banner--gotIt">
-        <img src="img/banner__we-ve_got_it.svg" alt="We've Got It" width="700" height="73">
+        <!-- <img src="img/banner__we-ve_got_it.svg" alt="We've Got It" width="700" height="73"> -->
+        <img class="" src="<?php echo get_theme_file_uri(); ?>/img/banner__we-ve_got_it.svg" alt="We've Got It" width="915" height="96">
       </div>
     </article>
 

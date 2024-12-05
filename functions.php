@@ -1,8 +1,8 @@
 <?php 
 
 function ncr_files() {
-  wp_enqueue_script('ncr_script_js', get_theme_file_uri( '/dist/script.js'), NULL, '1.0', false );
   wp_enqueue_style( 'ncr_main_style', get_theme_file_uri('main.css') );
+  wp_enqueue_script('ncr_script_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', false);
 }
 
 Add_action('wp_enqueue_scripts', 'ncr_files');
@@ -16,9 +16,12 @@ function ncr_features() {
   register_nav_menu('footerSiteNavigation', 'Footer Site Navigation');
 
   add_theme_support( 'title-tag' );
+  add_theme_support( 'post-thumbnails' );
 }
 
 add_action('after_setup_theme', 'ncr_features');
+
+add_filter( 'show_admin_bar', '__return_false' );
 
 
 

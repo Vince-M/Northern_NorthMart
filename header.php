@@ -17,10 +17,7 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="dist/style.css">
-  
-  <script defer src="dist/script.js"></script>
-  <script defer src="dist/bodyScrollLock.min.js"></script>
+  <!-- <link rel="stylesheet" href="dist/style.css"> -->
 
 
   <!-- Google fonts -->
@@ -69,7 +66,7 @@
                 aria-expanded="false" 
                 aria-labelledby="nav-label">
                 
-                <img src="img/btnOpen.png" alt="" width="30" height="23">
+                <img src="<?php echo get_theme_file_uri(); ?>/img/btnOpen.png" alt="" width="30" height="23">
               </button>
 
 
@@ -82,7 +79,7 @@
                 id="btnClose"
                 class="topnav__close">
 
-                <img src="img/close-button.png" alt="" width="26" height="26">
+                <img src="<?php echo get_theme_file_uri(); ?>/img/close-button.png" alt="" width="26" height="26">
               </button>
 
               <ul class="topnav__navigation">

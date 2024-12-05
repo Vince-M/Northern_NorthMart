@@ -1,4 +1,4 @@
-// console.log('HELLO');
+console.log('HELLO');
 
 const main = document.querySelector('#main');
 const body = document.querySelector('body');
