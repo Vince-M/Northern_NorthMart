@@ -21,7 +21,11 @@
         =================================================== -->
         <section class="wrapper promo__boxes">
           <div class="col1 fade-in">
-            <img src="img/promobox-hp_pampers_1280x640.jpg" alt="Pampers Diapers, Selected Varieties" width="640" height="320">
+            <?php 
+            $image = get_field('promo_box_top_left');
+            if( !empty( $image ) ): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+            <?php endif; ?>
           </div>
           <div class="col2 fade-in">
             <img src="img/promobox-hp_bingo_1280x640.jpg" alt="Promotional Bingo Contest" width="640" height="320">
