@@ -24,7 +24,7 @@
             <?php 
             $image = get_field('promo_box_top_left');
             if( !empty( $image ) ): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" height="350" />
             <?php endif; ?>
           </div>
           <div class="col2 fade-in">

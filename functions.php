@@ -1,8 +1,9 @@
 <?php 
 
 function ncr_files() {
-  wp_enqueue_style( 'ncr_main_style', get_theme_file_uri('main.css') );
   wp_enqueue_script('ncr_script_js', get_stylesheet_directory_uri() . '/dist/script.js', NULL, '1.0', false);
+  wp_enqueue_script('bodyScrollLock', get_stylesheet_directory_uri() . '/dist/bodyScrollLock.min.js', NULL, '1.0', false);
+  wp_enqueue_style( 'ncr_main_style', get_theme_file_uri('main.css') );
 }
 
 Add_action('wp_enqueue_scripts', 'ncr_files');
