@@ -15,6 +15,13 @@
     height: u.rem(104);
   }
 
+  &__menu {
+
+    @include u.breakpoint-down(small) {
+      width: 100%;
+    }
+  }
+
   &__open,
   &__close {
     background: transparent;

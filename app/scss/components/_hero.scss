@@ -343,9 +343,11 @@
 
   .full-width-split-screen > :not(img):first-child {
     grid-column: 2 / 3;
-    padding-left: u.rem(24);
-    padding-right: clamp(1rem, 5vw, 3rem);
+    // padding-left: u.rem(24);
+    // padding-right: clamp(1rem, 5vw, 3rem);
     // max-height: u.rem(560);
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .full-width-split-screen > :not(img):last-child {

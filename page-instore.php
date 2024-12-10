@@ -22,8 +22,6 @@
           <h2 class="hero__subhead">
           <?php echo get_field('page_hero_subheading' ); ?>
           </h2>
-          <!-- <h1 class="hero__head">Community</h1> -->
-          <!-- <h2 class="hero__subhead">Making a difference in the communities we serve</h2> -->
         </div>
         <?php 
           $image = get_field('page_hero_image');
@@ -33,6 +31,27 @@
         <!-- <img class="hero__section--image" src="img/hero_community_1264x896.jpg" alt=""> -->
       </section>
       <!-- ============================================== -->
+
+              <!-- BREADCRUMB
+        =================================================== -->
+        <div class="wrapper breadcrumb__section">
+          <div class="breadcrumb container row">
+            <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
+          </div> <!-- breadcrumbs -->
+        </div>
+        <!-- ============================================== -->
+
+                <!-- CONTENT
+        =================================================== -->
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<?php the_content(); ?>
+
+<?php endwhile; else: ?>
+
+<p>Sorry, no pages found</p>
+
+<?php endif; ?>
 
     </article>
     </main>
