@@ -21,14 +21,22 @@
         =================================================== -->
         <section class="wrapper promo__boxes">
           <div class="col1 fade-in">
-            <?php 
-            $image = get_field('promo_box_top_left');
-            if( !empty( $image ) ): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" height="350" />
-            <?php endif; ?>
+            <a href="<?php the_field('promo_box_top_left_link'); ?>">
+              <?php 
+              $image = get_field('promo_box_top_left');
+              if( !empty( $image ) ): ?>
+                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>"  />
+              <?php endif; ?>
+            </a>
           </div>
           <div class="col2 fade-in">
-            <img src="img/promobox-hp_bingo_1280x640.jpg" alt="Promotional Bingo Contest" width="640" height="320">
+          <a href="<?php the_field('promo_box_top_right_link'); ?>">
+              <?php 
+              $image = get_field('promo_box_top_right');
+              if( !empty( $image ) ): ?>
+                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>"  />
+              <?php endif; ?>
+            </a>
           </div>
         </section>
         <!-- ============================================== -->
