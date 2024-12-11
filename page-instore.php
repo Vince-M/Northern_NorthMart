@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Ways to save template
+  Template Name: Community template
 */
 ?>
 
@@ -9,51 +9,51 @@
     <!-- MAIN
     =================================================== -->
     <main id="main" class="site-content main" role="main">
-    <article>
+      <article>
 
-      <!-- HERO
-      =================================================== -->
-      <section class="hero__section hero__section--waystoSave full-width-split-screen">
-        
-        <div class="hero__text">
-          <h1 class="hero__head">
-            <?php echo get_field('page_hero_heading' ); ?>
-          </h1>
-          <h2 class="hero__subhead">
-          <?php echo get_field('page_hero_subheading' ); ?>
-          </h2>
-        </div>
-        <?php 
-          $image = get_field('page_hero_image');
-          if( !empty( $image ) ): ?>
-              <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
-        <?php endif; ?>
-        <!-- <img class="hero__section--image" src="img/hero_community_1264x896.jpg" alt=""> -->
-      </section>
-      <!-- ============================================== -->
-
-              <!-- BREADCRUMB
+        <!-- HERO
         =================================================== -->
-        <div class="wrapper breadcrumb__section">
-          <div class="breadcrumb container row">
-            <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
-          </div> <!-- breadcrumbs -->
-        </div>
+        <section class="hero__section hero__section--waystoSave full-width-split-screen">
+          
+          <div class="hero__text">
+            <h1 class="hero__head">
+              <?php echo get_field('page_hero_heading' ); ?>
+            </h1>
+            <h2 class="hero__subhead">
+            <?php echo get_field('page_hero_subheading' ); ?>
+            </h2>
+          </div>
+          <?php 
+            $image = get_field('page_hero_image');
+            if( !empty( $image ) ): ?>
+                <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+          <?php endif; ?>
+          <!-- <img class="hero__section--image" src="img/hero_community_1264x896.jpg" alt=""> -->
+        </section>
         <!-- ============================================== -->
 
-                <!-- CONTENT
-        =================================================== -->
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <!-- BREADCRUMB
+          =================================================== -->
+          <div class="wrapper breadcrumb__section">
+            <div class="breadcrumb container row">
+              <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
+            </div> <!-- breadcrumbs -->
+          </div>
+          <!-- ============================================== -->
 
-<?php the_content(); ?>
+                  <!-- CONTENT
+          =================================================== -->
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<?php endwhile; else: ?>
+          <?php the_content(); ?>
 
-<p>Sorry, no pages found</p>
+          <?php endwhile; else: ?>
 
-<?php endif; ?>
+          <p>Sorry, no pages found</p>
 
-    </article>
+          <?php endif; ?>
+
+      </article>
     </main>
 
 
