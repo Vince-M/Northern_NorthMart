@@ -434,6 +434,10 @@ figure.advocacy__index--img {
   &__intro {
     margin-bottom: u.rem(80);
 
+    &--ourpromise {
+      background-color: var(--primaryRed);
+    }
+
     &--community {
       background-color: var(--primaryBlue);
     }

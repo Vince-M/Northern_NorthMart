@@ -101,6 +101,11 @@
       color: var(--darkGreen);
     }
 
+    &--ourpromise {
+      background-color: var(--lightRed);
+      color: var(--darkRed);
+    }
+
     &--hhfAbout {
       background-image: url(../img/hero_fw_hhfAbout_3840x1000.jpg);
     }
