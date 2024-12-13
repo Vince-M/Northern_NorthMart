@@ -58,6 +58,11 @@
   &__logo {
     padding: 72px 16px 12px;
 
+    @include u.breakpoint-down(small) {
+      width: u.rem(125);
+      padding-top: u.rem(50);
+    }
+
     &:hover {
       opacity: 0.8;
       transform: opacity 250ms ease-in-out;
@@ -101,6 +106,7 @@
     @include u.breakpoint-down(medium) {
       display: flex;
       justify-content: flex-end;
+      padding-right: u.rem(24);
       // width: 100%;
       // margin: 0 u.rem(40) 0 0;
     }
@@ -124,6 +130,10 @@
       margin-block-end: 120px;
       padding-top: 1.25rem;
       width: 100%;
+    }
+
+    @include u.breakpoint-down(small) {
+      margin-block-end: u.rem(50);
     }
 
     img {
@@ -160,6 +170,10 @@
       transition-property: opacity;
     }
   }
+
+  @include u.breakpoint-down(small) {
+    gap: u.rem(24);
+  }
 }
 
   &__navigation {
@@ -185,7 +199,7 @@
     @include u.breakpoint-down(small) {
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: u.rem(16);
+      margin-bottom: 0;
       padding-bottom: u.rem(16);
       border-bottom: 2px solid var(--primaryBlue);
     }
@@ -209,7 +223,7 @@
       padding: 0;
       // max-height: 100%;
       max-height: 0;
-      align-items: center;
+      // align-items: center;
     }
 
     @include u.breakpoint-down(small) {
@@ -232,10 +246,11 @@
 
     @include u.breakpoint-down(medium) {
       gap: 16px;
-      padding: u.rem(30) 0;
-      width: 100%
+      padding: 0 0 u.rem(30);
+      width: 100%;
+      justify-content: space-between;
       // flex-direction: column;
-      // align-items: flex-start;
+      align-items: flex-start;
     }
 
     @include u.breakpoint-down(small) {
@@ -374,11 +389,20 @@
   background-color: var(--white);
 
   @include u.breakpoint-down(medium) {
-    position: relative;
+    // position: relative;
+    position: absolute;
     width: u.rem(250);
     display: none;
-    top: u.rem(8);
+    top: u.rem(32);
+    left: u.rem(-50);
     margin-bottom: u.rem(24);
+  }
+
+  @include u.breakpoint-down(small) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
   }
 
   li a {

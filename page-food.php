@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: inStore template
+  Template Name: food template
 */
 ?>
 
