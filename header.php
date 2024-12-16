@@ -85,13 +85,13 @@
               <ul class="topnav__navigation">
                 <li class="topnav__location topnav__item">
                   <a class="topnav__link" href="#">
-                    <img  class="topnav__link--icon" src="img/icon_marker.svg" alt="" width="20" height="20"> 
+                    <img  class="topnav__link--icon" src="<?php echo get_theme_file_uri(); ?>/img/icon_location.svg" alt="" width="20" height="20"> 
                     Location
                   </a>
                 </li>
                 <li class="topnav__email topnav__item">
                   <a class="topnav__link" href="#">
-                    <img class="topnav__link--icon" src="img/icon_email.svg" alt="" width="22" height="22">
+                    <img class="topnav__link--icon" src="<?php echo get_theme_file_uri(); ?>/img/icon_email.svg" alt="" width="22" height="22">
                     email signup
                   </a>
                 </li>
