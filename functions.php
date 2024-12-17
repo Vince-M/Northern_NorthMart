@@ -25,7 +25,6 @@ add_action('after_setup_theme', 'ncr_features');
 add_filter( 'show_admin_bar', '__return_false' );
 
 
-
 // this has to be the last function in the funtions.php file
 function defer_parsing_of_js( $url ) {
   if ( is_user_logged_in() ) return $url; //don't break WP Admin
