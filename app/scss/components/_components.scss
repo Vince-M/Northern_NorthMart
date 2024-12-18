@@ -527,3 +527,35 @@ figure.advocacy__index--img {
 .fade-in.appear {
   opacity: 1;
 }
+
+// Search
+.searchbox input[type="text"]{
+  padding: 9px 10px;
+  border: 1px solid var(--primaryBlue);
+}
+.searchbox input[type="submit"]{
+  background: var(--primaryBlue);
+  border: 1px solid var(--primaryBlue);
+  color: var(--white);
+  padding: 9px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    background: var(--white);
+    border: 1px solid var(--primaryBlue);
+    color: var(--primaryBlue);
+  }
+}
+
+.headline {
+
+  &__search {
+    color: var(--primaryBlue);
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem,2.1875rem + 1vw,3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    }
+}

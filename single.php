@@ -1,9 +1,3 @@
-<?php
-/*
-  Template Name: HHF template
-*/
-?>
-
 <?php get_header(); ?>
 
     <!-- MAIN
@@ -45,15 +39,31 @@
 
         <!-- CONTENT
         =================================================== -->
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="wrapper wrapper__singleCol">
 
-        <?php the_content(); ?>
+          <?php
+            while( have_posts() );
+              the_post();
+              ?>
 
-        <?php endwhile; else: ?>
+              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <p>Sorry, no pages found</p>
+                <header>
+                  <h2><?php the_title(); ?></h2>
+                  <div class="meta-info">
+                    <p>Posted in <?php echo esc_attr(get_the_date() ); ?></p>
+                    <p>Categories: <?php the_category( ' ' ); ?></p>
+                    <p>Tags: <?php the_tags( '', ', '); ?></p>
+                  </div>
+                </header>
+                <div class="content">
+                  <?php the_content(); ?>
+                </div>
 
-        <?php endif; ?>
+              </article>
+            <?php endwhile;
+          ?>
+        </div>
 
         
 

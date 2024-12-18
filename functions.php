@@ -22,7 +22,15 @@ function ncr_features() {
 
 add_action('after_setup_theme', 'ncr_features');
 
-add_filter( 'show_admin_bar', '__return_false' );
+// add_filter( 'show_admin_bar', '__return_false' );
+
+function wpshock_search_filter( $query ) {
+  if ( $query->is_search ) {
+      $query->set( 'post_type', array('post','page') );
+  }
+  return $query;
+}
+add_filter('pre_get_posts','wpshock_search_filter');
 
 
 // this has to be the last function in the funtions.php file

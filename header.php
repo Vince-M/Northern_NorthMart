@@ -72,8 +72,7 @@
 
             <!-- nav__toggle header__menu hide-for-desktop -->
 
-            <div id="menuTopNav" class="topnav__menu" role="dialog" 
-            aria-labelledby="nav-label">
+            <div id="menuTopNav" class="topnav__menu" role="dialog" aria-labelledby="nav-label">
 
               <button
                 id="btnClose"
@@ -97,9 +96,8 @@
                 </li>
                 <li class="topnav__item">
                   <form>
-                    <div>
-                      <input type="search" id="mySearch" class="mySearch" name="q">
-                      <button class="btn__search"><img src="img/icon_search.svg" alt="magnifying glass for search" width="20" height="20"></button>
+                    <div class="searchbox">
+                      <?php get_search_form(); ?>
                     </div>
                   </form>
                 </li>
