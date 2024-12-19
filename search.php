@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<main id="main" class="site-content main" role="main">
+<main id='main' class='site-content main' role='main'>
   <article>
     <!-- HERO
     =================================================== -->
@@ -25,7 +25,6 @@
         if( !empty( $image ) ): ?>
             <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
       <?php endif; ?>
-      <!-- <img class="hero__section--image" src="img/hero_community_1264x896.jpg" alt=""> -->
     </section>
     <!-- ============================================== -->
 
@@ -42,33 +41,25 @@
     =================================================== -->
     <div class="wrapper wrapper__singleCol">
 
-    <h1>Search results for: <?php echo get_search_query(); ?></h1>
+
+    <h2>Search results for: <?php echo get_search_query(); ?></h2>
 
             <?php 
+              get_search_form();
 
-            get_search_form();
+              while( have_posts() ):
+                  the_post();
+            ?>
 
-            while( have_posts() ):
-                the_post();
-                ?>
-                <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
-                    
-                    <header>
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <?php if( 'post' == get_post_type() ): ?>
-                        <div class="meta-info">
-                            <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
-                            <p>Categories: <?php the_category( ' ' ); ?></p>
-                            <p>Tags: <?php the_tags( '', ', ' ); ?></p>     
-                        </div>
-                        <?php endif; ?>
-                    </header>
-                    <div class="content">
-                        <?php the_excerpt(); ?>
-                    </div>
-                </article>
-                <?php
-            endwhile;
+            <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
+                
+              <div class="content">
+                  <?php the_excerpt(); ?>
+              </div>
+            </article>
+            
+            <?php
+              endwhile;
             ?>
 
     </div>

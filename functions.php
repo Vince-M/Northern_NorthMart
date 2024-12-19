@@ -26,8 +26,8 @@ add_action('after_setup_theme', 'ncr_features');
 
 function wpshock_search_filter( $query ) {
   if ( $query->is_search ) {
-      $query->set( 'post_type', array('post','page') );
-  }
+        $query->set( 'post_type', array('post','page') );
+    }
   return $query;
 }
 add_filter('pre_get_posts','wpshock_search_filter');
