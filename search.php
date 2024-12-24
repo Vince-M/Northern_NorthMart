@@ -28,30 +28,35 @@
     </section>
     <!-- ============================================== -->
 
-    <!-- BREADCRUMB
-    =================================================== -->
-    <div class="wrapper breadcrumb__section">
-      <div class="breadcrumb container row">
-        <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
-      </div> <!-- breadcrumbs -->
-    </div>
-    <!-- ============================================== -->
+
 
     <!-- CONTENT
     =================================================== -->
     <div class="wrapper wrapper__singleCol">
 
 
-    <h2>Search results for: <?php echo get_search_query(); ?></h2>
+    <h2 class="section-header">Search results for: <?php echo get_search_query(); ?></h2>
 
-            <?php 
-              get_search_form();
 
-              while( have_posts() ):
-                  the_post();
-            ?>
+              <?php
+                get_search_form(); 
+
+                while( have_posts() ) : the_post();
+              ?>
+
 
             <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
+
+              <header>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php if( 'post' == get_post_type() ): ?>
+                <div class="meta-info">
+                  <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
+                  <p>Categories: <?php the_category( ' ' ); ?></p>
+                  <p>Tags: <?php the_tags( '', '. '); ?></p>
+                </div>
+                <?php endif; ?>
+              </header>
                 
               <div class="content">
                   <?php the_excerpt(); ?>
@@ -60,6 +65,7 @@
             
             <?php
               endwhile;
+              the_posts_pagination();
             ?>
 
     </div>

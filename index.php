@@ -16,8 +16,28 @@
         =================================================== -->
         <div class="wrapper">
           <div class="full-width-split-screen content__intro subpage__ncrCol1">
-            <div class="textIntro subpage__textIntro">
-              <p>Look for the Price Drop signs throughout the store - you'll find items specially selected to help you save. From staples like meats, fruits and vegetables to family favourites like pizza, cheese slices and chicken wings, all our Price Drop items have been chosen to help you fill your basket for less. And all Price Drop items are locked in for a 4 or 5 week period to help you save even more!</p>
+
+            <div class="wrapper wrapper__singleCol">
+            <?php
+                  if( have_posts() ):
+                    while( have_posts() ) : the_post();
+                      ?>
+
+                      <?php get_template_part( 'parts/content' ); ?>
+
+                      <?php
+                        endwhile; 
+                        the_posts_pagination();
+                      ?>
+                    <?php   
+                      else: 
+                    ?>
+
+                    <p>Nothing yet to be displayed!</p>
+                    
+                <?php
+                  endif;
+                ?>
             </div>
 
           </div>

@@ -95,11 +95,9 @@
                   </a>
                 </li>
                 <li class="topnav__item">
-                  <form>
-                    <div class="searchbox">
-                      <?php get_search_form(); ?>
-                    </div>
-                  </form>
+                  <div class="searchbox">
+                    <?php get_search_form(); ?>
+                  </div>
                 </li>
                 <li class="topLinks__lang topnav__item topnav__link">
                   <span class="topLinks__lang--active">eng</span>/fre

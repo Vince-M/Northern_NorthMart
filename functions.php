@@ -18,9 +18,11 @@ function ncr_features() {
 
   add_theme_support( 'title-tag' );
   add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+  add_theme_support( 'automatic-feed-links' );
 }
 
-add_action('after_setup_theme', 'ncr_features');
+add_action('after_setup_theme', 'ncr_features', 0);
 
 // add_filter( 'show_admin_bar', '__return_false' );
 
@@ -31,6 +33,30 @@ function wpshock_search_filter( $query ) {
   return $query;
 }
 add_filter('pre_get_posts','wpshock_search_filter');
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+  function wp_body_open() {
+    do_action( 'wp_body_open' );
+  }
+}
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function wpdocs_my_search_form( $form ) {
+	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+	<div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+	</div>
+	</form>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'wpdocs_my_search_form' );
 
 
 // this has to be the last function in the funtions.php file
