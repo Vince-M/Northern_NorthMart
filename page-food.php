@@ -32,26 +32,33 @@
         </section>
         <!-- ============================================== -->
 
-          <!-- BREADCRUMB
-          =================================================== -->
-          <div class="wrapper breadcrumb__section">
-            <div class="breadcrumb container row">
-              <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
-            </div> <!-- breadcrumbs -->
-          </div>
-          <!-- ============================================== -->
+        <!-- BREADCRUMB
+        =================================================== -->
+        <div class="wrapper breadcrumb__section">
+          <div class="breadcrumb container row">
 
-                  <!-- CONTENT
-          =================================================== -->
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }
+              ?>
 
-          <?php the_content(); ?>
+          </div> <!-- breadcrumbs -->
+        </div>
+        <!-- ============================================== -->
 
-          <?php endwhile; else: ?>
+        <!-- CONTENT
+        =================================================== -->
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <p>Sorry, no pages found</p>
+        <?php the_content(); ?>
 
-          <?php endif; ?>
+        <?php endwhile; else: ?>
+
+        <p>Sorry, no pages found</p>
+
+        <?php endif; ?>
+        <!-- ============================================== -->
 
       </article>
     </main>

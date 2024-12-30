@@ -3,7 +3,7 @@
 .hero {
 
   &__section {
-    margin: u.rem(100) 0 u.rem(16);
+    margin: u.rem(90) 0 u.rem(16);
     max-height: u.rem(560);
     overflow: hidden; 
 
@@ -73,7 +73,7 @@
       display: block;
       position: relative;
       overflow: hidden;
-      margin: u.rem(100) 0;
+      margin: u.rem(90) 0 u.rem(100);
       width: 100%;
       height: 90vh;
 

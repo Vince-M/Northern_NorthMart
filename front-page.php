@@ -17,29 +17,7 @@
         </section>
         <!-- ============================================== -->
 
-        <!-- PROMO BOXES
-        =================================================== -->
-        <section class="wrapper promo__boxes">
-          <div class="col1 fade-in">
-            <a href="<?php the_field('promo_box_top_left_link'); ?>">
-              <?php 
-              $image = get_field('promo_box_top_left');
-              if( !empty( $image ) ): ?>
-                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>"  />
-              <?php endif; ?>
-            </a>
-          </div>
-          <div class="col2 fade-in">
-          <a href="<?php the_field('promo_box_top_right_link'); ?>">
-              <?php 
-              $image = get_field('promo_box_top_right');
-              if( !empty( $image ) ): ?>
-                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>"  />
-              <?php endif; ?>
-            </a>
-          </div>
-        </section>
-        <!-- ============================================== -->
+        <?php the_content(); ?>
 
         <!-- SAVING PROMO
         =================================================== -->
@@ -47,15 +25,6 @@
           <div class="wrapper priceDropBanner">
             <img class="pdBanner" src="img/priceDrop_banner.svg" alt="">
             <img  class="saveMore" src="img/priceDrop_helpingYouSaveMore.svg" alt="">
-          </div>
-        </section>
-        <!-- ============================================== -->
-
-        <!-- FULL WIDTH PROMO BOXES
-        =================================================== -->
-        <section class="wrapper promo__boxes--fw">
-          <div class="fade-in fullWidth">
-            <img src="img/fw_vendor_branded-jackets_1240x320.webp" alt="" width="1240" height="320">
           </div>
         </section>
         <!-- ============================================== -->
@@ -71,18 +40,6 @@
             <h2 class="indexRecipe__title">Korean Beef and Broccoli</h2>
             <p class="indexRecipe__description">Serve this saucy meat dish over rice and broccoli.</p>
             <p class="indexRecipe__link"><a href="#">view recipe &#10095;</a></p>
-          </div>
-        </section>
-        <!-- ============================================== -->
-
-        <!-- PROMO BOXES
-        =================================================== -->
-        <section class="wrapper promo__boxes">
-          <div class="col1 fade-in">
-            <img src="img/promobox-hp_northy_1280x640.jpg" alt="Promotional Northy the Bear" width="640" height="320">
-          </div>
-          <div class="col2 fade-in">
-            <a href="landingPge.html"><img src="img/promobox-hp_activia_1280x640.jpg" alt="Promotional Bingo Contest" width="640" height="320"></a>
           </div>
         </section>
         <!-- ============================================== -->

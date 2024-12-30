@@ -37,7 +37,6 @@
 
     <h2 class="section-header">Search results for: <?php echo get_search_query(); ?></h2>
 
-
               <?php
                 get_search_form(); 
 

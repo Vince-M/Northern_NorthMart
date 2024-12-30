@@ -38,7 +38,13 @@
       =================================================== -->
       <div class="wrapper breadcrumb__section">
         <div class="breadcrumb container row">
-          <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
+
+            <?php if(function_exists('bcn_display'))
+              {
+                  bcn_display();
+              }
+            ?>
+
         </div> <!-- breadcrumbs -->
       </div>
       <!-- ============================================== -->

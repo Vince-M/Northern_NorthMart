@@ -9,51 +9,58 @@
     <!-- MAIN
     =================================================== -->
     <main id="main" class="site-content main" role="main">
-    <article>
+      <article>
 
-      <!-- HERO
-      =================================================== -->
-      <section class="hero__section hero__section--ourpromise full-width-split-screen">
-        
-        <div class="hero__text">
-          <h1 class="hero__head">
-            <?php echo get_field('page_hero_heading' ); ?>
-          </h1>
-          <h2 class="hero__subhead">
-          <?php echo get_field('page_hero_subheading' ); ?>
-          </h2>
+        <!-- HERO
+        =================================================== -->
+        <section class="hero__section hero__section--ourpromise full-width-split-screen">
+          
+          <div class="hero__text">
+            <h1 class="hero__head">
+              <?php echo get_field('page_hero_heading' ); ?>
+            </h1>
+            <h2 class="hero__subhead">
+            <?php echo get_field('page_hero_subheading' ); ?>
+            </h2>
+          </div>
+          <?php 
+            $image = get_field('page_hero_image');
+            if( !empty( $image ) ): ?>
+                <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+          <?php endif; ?>
+
+        </section>
+        <!-- ============================================== -->
+
+        <!-- BREADCRUMB
+        =================================================== -->
+        <div class="wrapper breadcrumb__section">
+          <div class="breadcrumb container row">
+
+              <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }
+              ?>
+
+          </div> <!-- breadcrumbs -->
         </div>
-        <?php 
-          $image = get_field('page_hero_image');
-          if( !empty( $image ) ): ?>
-              <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+        <!-- ============================================== -->
+
+        <!-- CONTENT
+        =================================================== -->
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+        <?php the_content(); ?>
+
+        <?php endwhile; else: ?>
+
+        <p>Sorry, no pages found</p>
+
         <?php endif; ?>
+        <!-- ============================================== -->
 
-      </section>
-      <!-- ============================================== -->
-
-      <!-- BREADCRUMB
-      =================================================== -->
-      <div class="wrapper breadcrumb__section">
-        <div class="breadcrumb container row">
-          <p><a href="index.html">Home</a> /  <a class="breadcrumb__active">Ways to Save</a></p>
-        </div> <!-- breadcrumbs -->
-      </div>
-      <!-- ============================================== -->
-
-      <!-- CONTENT
-      =================================================== -->
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-      <?php the_content(); ?>
-
-      <?php endwhile; else: ?>
-
-      <p>Sorry, no pages found</p>
-
-      <?php endif; ?>
-
-    </article>
+      </article>
     </main>
 
 

@@ -7,7 +7,7 @@
     flex-direction: row;
     gap: u.rem(32);
     margin-bottom: u.rem(80);
-    padding: 0 u.rem(24);
+    // padding: 0 u.rem(24);
 
     @include u.breakpoint-down(medium) {
       flex-direction: column;
@@ -326,6 +326,22 @@ figure.advocacy__index--img {
       margin-bottom: u.rem(40);
     }
   }
+}
+
+.waystosave {
+
+  &__intro {
+    background-color: var(--lightYellow);
+    color: var(--primaryBlue);
+    margin-bottom: u.rem(80);
+    }
+
+    &__textIntro {
+      @include u.breakpoint-down(small) {
+        padding-top: 40px;
+      }
+  }
+
 }
 
 .community {
