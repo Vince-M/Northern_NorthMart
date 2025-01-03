@@ -177,12 +177,13 @@ figure.advocacy__index--img {
     }
   
 
-  &__img {
-    margin-bottom: 24px;
-  }
+  // &__img {
+  //   margin-bottom: 24px;
+  // }
 
   &__text {
     padding: 0 24px;
+    margin-top: 24px;
 
     &--callout {
       color: var(--primaryBlue);
@@ -451,16 +452,18 @@ figure.advocacy__index--img {
     margin-bottom: u.rem(80);
 
     &--ourpromise {
-      background-color: var(--primaryRed);
+      background-color: var(--darkGreen);
+      color: var(--white);
     }
 
     &--community {
       background-color: var(--primaryBlue);
+      color: var(--white);
     }
 
     &--healthyHorizons {
-      color: var(--white);
       background-color: var(--darkGreen);
+      color: var(--white);
     }
 
     &--waystoSave{
