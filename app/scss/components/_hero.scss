@@ -101,10 +101,10 @@
       color: var(--darkGreen);
     }
 
-    &--ourpromise {
-      background-color: var(--lightGreen);
-      color: var(--darkGreen);
-    }
+    // &--ourpromise {
+    //   background-color: var(--lightGreen);
+    //   color: var(--darkGreen);
+    // }
 
     &--hhfAbout {
       background-image: url(../img/hero_fw_hhfAbout_3840x1000.jpg);
@@ -181,7 +181,8 @@
       }
     }
 
-    &--communityTextBkgd {
+    &--communityTextBkgd,
+    &--ourpromise {
       background-color: var(--lightBlue);
 
       h1 {

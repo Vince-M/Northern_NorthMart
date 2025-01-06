@@ -65,3 +65,17 @@ strong {
   margin-top: 0;
   line-height: u.rem(24);
 }
+
+.quote {
+  font-size: u.rem(18);
+  line-height: 1.4;
+  font-weight: 300;
+  padding: u.rem(20);
+
+  &__promise {
+    color: var(--darkBlue);
+    background-color: var(--lightBlue);
+    border-left: 12px solid var(--primaryBlue);
+  }
+
+}

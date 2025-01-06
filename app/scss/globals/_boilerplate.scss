@@ -77,6 +77,10 @@ blockquote {
 		}
 }
 
+ul li {
+	margin-bottom: u.rem(16);
+}
+
 .visually-hidden {
 	position: absolute;
 	left: -10000px;
