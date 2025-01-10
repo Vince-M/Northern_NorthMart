@@ -15,9 +15,8 @@
         =================================================== -->
         <section class="hero__section hero__section--fw" role="banner" data-type="background" data-speed="2" 
           style="background-image: url('<?php echo get_field('subpage_bkgd_image')['url']; ?>')">
-
           
-          <div class="hero__section--colorBkgd" style="background-color:<?php the_field('background_color'); ?>">
+          <div class="hero__section--colorBkgd subpage" style="background-color:<?php the_field('background_color'); ?>">
             <h1><?php echo esc_attr( get_field( 'subpage_hero_heading' ) ); ?></h1>
             <h2><?php echo esc_attr( get_field( 'subpage_hero_subheading' ) ); ?></h2>
           </div>

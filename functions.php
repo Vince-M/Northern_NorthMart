@@ -20,6 +20,7 @@ function ncr_features() {
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
   add_theme_support( 'automatic-feed-links' );
+  add_image_size('pageBanner', 600, 700, false);
 }
 
 add_action('after_setup_theme', 'ncr_features', 0);

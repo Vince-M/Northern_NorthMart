@@ -606,3 +606,19 @@ figure.advocacy__index--img {
 .subpage_hero_head_rev {
   color: var(--white);
 }
+
+.subpage h1,
+.subpage h2 {
+  color: var(--darkBlue);
+}
+
+.page {
+
+  &__content h2 {
+    color: var(--primaryBlue);
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem,2.1875rem + 1vw,3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+}
