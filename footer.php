@@ -13,7 +13,7 @@
     <article class="footer__bar">
       <section class="wrapper footer__barContent">
         <h2>Be on the watch for Savings with our Savings Programs</h2>
-        <a href="savings.html"><div class="btn btn__tertiary">
+        <a href="<?php echo esc_url(site_url( '/savings-programs' ) ); ?>"><div class="btn btn__tertiary">
           Visit Price Drop
         </div></a>
       </section>
