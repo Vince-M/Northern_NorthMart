@@ -98,6 +98,59 @@ figure.priceDrop-cashscreen {
   }
 }
 
+.grocery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: u.rem(24);
+  // margin-bottom: u.rem(80);
+
+  @include u.breakpoint-down(small) {
+    grid-template-columns: 100%;
+  }
+
+  
+
+  h2 {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    color: var(--primaryBlue);
+    font-weight: 700;
+    margin-bottom: u.rem(8);
+  }
+
+  img {
+    margin-bottom: u.rem(20);
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  &__text {
+    padding: 0 u.rem(20);
+    margin-bottom: 0;
+  }
+
+  &__list li {
+    margin-bottom: u.rem(4);
+  }
+
+  &__col1 {
+    
+  }
+
+  &__col2 {
+
+  }
+}
+
+.product {
+
+  &__group {
+    margin-bottom: u.rem(80);
+  }
+}
+
 figure.advocacy__index--img {
   padding: 0;
 }
