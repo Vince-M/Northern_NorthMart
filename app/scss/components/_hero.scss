@@ -388,13 +388,15 @@
   justify-content: center;
   align-items: flex-start;
   width: 40%;
-  padding: u.rem(24) u.rem(24) u.rem(16);
+  padding: u.rem(24) u.rem(16);
   margin-left: 10%;
   margin-bottom: 20px;
   
   @include u.breakpoint-down(medium) {
     width: 65%;
     margin: 0;
+    padding: 0;
+    position: absolute;
   }
   
   @include u.breakpoint-down(small) {
@@ -402,7 +404,7 @@
     // position: absolute;
     margin: 0;
     bottom: 0;
-    padding: u.rem(90) u.rem(24) u.rem(20);
+    padding: u.rem(20) u.rem(24);
   }
 
   h1 {
