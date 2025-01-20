@@ -610,6 +610,23 @@ figure.advocacy__index--img {
 }
 
 
+
+.search {
+
+  &__hero {
+    margin-bottom: u.rem(80);
+  }
+
+  &__header {
+    margin-bottom: u.rem(60);
+  }
+
+  &__results {
+    margin: u.rem(80) 0;
+  }
+}
+
+
 // Fade-in animation
 .fade-in {
   opacity: 0;

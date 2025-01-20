@@ -10,32 +10,23 @@
   <article>
     <!-- HERO
     =================================================== -->
-    <section class="hero__section hero__section--about full-width-split-screen">
+    <section class="hero__section hero__section--fw search__hero" role="banner" data-type="background" data-speed="2" 
+      style="background-image: url('<?php echo get_field('subpage_bkgd_image')['url']; ?>')">
       
-      <div class="hero__text">
-        <h1 class="hero__head">
-          <?php echo get_field('page_hero_heading' ); ?>
-        </h1>
-        <h2 class="hero__subhead">
-        <?php echo get_field('page_hero_subheading' ); ?>
-        </h2>
+      <div class="hero__section--colorBkgd subpage" style="background-color:<?php the_field('background_color'); ?>">
+        <h1><?php echo esc_attr( get_field( 'subpage_hero_heading' ) ); ?></h1>
+        <h2><?php echo esc_attr( get_field( 'subpage_hero_subheading' ) ); ?></h2>
       </div>
-      <?php 
-        $image = get_field('page_hero_image');
-        if( !empty( $image ) ): ?>
-            <img class="page_hero_image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
-      <?php endif; ?>
     </section>
     <!-- ============================================== -->
 
-
-
     <!-- CONTENT
     =================================================== -->
-    <div class="wrapper wrapper__singleCol">
+    <div class="wrapper wrapper__singleCol search__hero">
 
 
-    <h2 class="section-header">Search results for: <?php echo get_search_query(); ?></h2>
+    <h1 class="section-header search__header">Search results for: <?php echo get_search_query(); ?></h1>
+
 
               <?php
                 get_search_form(); 
@@ -43,6 +34,7 @@
                 while( have_posts() ) : the_post();
               ?>
 
+          
 
             <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
 
@@ -66,6 +58,7 @@
               endwhile;
               the_posts_pagination();
             ?>
+          
 
     </div>
     <!-- ============================================== -->
