@@ -607,6 +607,15 @@ figure.advocacy__index--img {
     color: var(--white);
     background-color: var(--darkBlue);
   }
+
+  &__column {
+    padding: 0;
+
+    h2 {
+      color: var(--primaryBlue);
+      width: 100%;
+    }
+  }
 }
 
 
@@ -691,4 +700,8 @@ figure.advocacy__index--img {
     font-weight: 700;
     margin-bottom: 1.5rem;
   }
+}
+
+.margin__bottom {
+  margin-bottom: 60px;
 }
