@@ -42,7 +42,7 @@
         <div class="wrapper wrapper__singleCol">
 
           <?php
-            while( have_posts() );
+            while( have_posts() ):
               the_post();
               ?>
 
@@ -61,8 +61,8 @@
                 </div>
 
               </article>
-            <?php endwhile;
-          ?>
+            <?php endwhile; ?>
+            
         </div>
 
         

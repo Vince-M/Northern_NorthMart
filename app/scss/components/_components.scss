@@ -162,6 +162,7 @@ figure.advocacy__index--img {
   }
 }
 
+
 .advocacy {
   background-color: var(--advocacyRed);
   margin-bottom: u.rem(80);
@@ -245,6 +246,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* HEALTY HORIZONS CARD SECTION */
 .hhf {
 
   &__textLink {
@@ -304,6 +306,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* WE FINANCIAL CARD SECTION */
 .we {
 
   &__cardList ul li {
@@ -315,6 +318,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* TOC - PAGE LINKS SECTION */
 .toc {
   margin-bottom: u.rem(80);
 
@@ -386,6 +390,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* WAYS TO SAVE SECTION */
 .waystosave {
 
   &__intro {
@@ -402,6 +407,7 @@ figure.advocacy__index--img {
 
 }
 
+/* COMMUNITY SECTION */
 .community {
 
   &__intro {
@@ -442,6 +448,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* HEALTHY HORIZONS SECTION */
 .hhf {
 
   &__intro {
@@ -573,6 +580,7 @@ figure.advocacy__index--img {
   
 }
 
+/* PRICE DROP SECTION */
 .priceDropBanner {
   display: flex;
   flex-direction: row;
@@ -593,6 +601,7 @@ figure.advocacy__index--img {
   }
 }
 
+/* OUR PROMISE SECTION */
 .promise {
 
   h2 {
@@ -614,6 +623,129 @@ figure.advocacy__index--img {
     h2 {
       color: var(--primaryBlue);
       width: 100%;
+    }
+  }
+}
+
+/* LOCATIONS SECTION */
+.locations {
+
+  &__header {
+    font-weight: 700;
+    color: var(--primaryBlue);
+    letter-spacing: -0.5;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  &__provinceHead {
+    font-weight: 700;
+    font-size: u.rem(38);
+    color: var(--primaryBlue);
+    letter-spacing: -0.5;
+    line-height: 1;
+    margin-bottom: u.rem(24);
+  }
+
+  &__content {
+    margin-bottom: u.rem(80);
+
+    &--provinces {
+      margin-bottom: u.rem(60);
+    }
+
+    &--rows {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // padding: 0 u.rem(24);
+      gap: u.rem(32);
+
+      @include u.breakpoint-down(small) {
+        grid-template-columns: 100%;
+        padding: 0;
+      }
+    }
+
+    &--row1 {
+
+    }
+
+    &--row2 {
+      
+    }
+  }
+
+}
+
+.location {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid var(--darkBlue);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: u.rem(24);
+
+  &__id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: u.rem(16);
+
+    h4 {
+      font-size: 32px;
+      color: var(--primaryBlue);
+      margin-bottom: 0;
+    }
+
+    &--brand {
+      max-width: 100%;
+      display: inline-block;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: u.rem(24);
+    width: 100%;
+  }
+
+  &__contact > p,
+  &__hours > p {
+    margin-bottom: 0;
+  }
+
+  &__hours {
+
+  }
+
+  &__services {
+    color: var(--primaryBlue);
+    width: 100%;
+    
+    h5 {
+      font-size: u.rem(24);
+      margin-bottom: u.rem(8);
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: u.rem(16);
+
+    p {
+      margin-bottom: 0;
     }
   }
 }
