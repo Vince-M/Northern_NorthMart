@@ -77,6 +77,16 @@ blockquote {
 		}
 }
 
+.current_page_item {
+	color: var(--darkYellow);
+	// border-bottom: 1px solid var(--primaryBlue);
+}
+
+[aria-current]:not([aria-current="true"]) {
+	color: var(--darkYellow);
+  font-weight: bold;
+}
+
 ul li {
 	margin-bottom: u.rem(16);
 }

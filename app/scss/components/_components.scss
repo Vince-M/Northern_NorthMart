@@ -702,6 +702,14 @@ figure.advocacy__index--img {
   }
 }
 
-.margin__bottom {
-  margin-bottom: 60px;
+.margin {
+  
+  &__bottom {
+    margin-bottom: u.rem(60);
+
+    &--20 {
+      margin-bottom: u.rem(20);
+    }
+  }
+
 }
